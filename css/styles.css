@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --templeos-black: #000000;
+    --templeos-blue: #0000aa;
+    --templeos-green: #00aa00;
+    --templeos-cyan: #00aaaa;
+    --templeos-red: #aa0000;
+    --templeos-magenta: #aa00aa;
+    --templeos-brown: #aa5500;
+    --templeos-gray: #aaaaaa;
+    --templeos-dark-gray: #555555;
+    --templeos-light-blue: #5555ff;
+    --templeos-light-green: #55ff55;
+    --templeos-light-cyan: #55ffff;
+    --templeos-light-red: #ff5555;
+    --templeos-light-magenta: #ff55ff;
+    --templeos-yellow: #ffff55;
+    --templeos-white: #ffffff;
+}
+
+body {
+    background-color: var(--templeos-gray);
+    color: var(--templeos-black);
+    font-family: 'Courier New', Courier, monospace;
+    cursor: url('../assets/TempleOS Cursor.cur'), auto;
+}
+
+.bg-templeos-blue {
+    background-color: var(--templeos-blue);
+}
+
+.text-templeos-white {
+    color: var(--templeos-white);
+}
+
+.text-templeos-yellow {
+    color: var(--templeos-yellow);
+}
+
+.text-templeos-green {
+    color: var(--templeos-green);
+}
+
+.text-templeos-cyan {
+    color: var(--templeos-cyan);
+}
+
+.text-templeos-magenta {
+    color: var(--templeos-magenta);
+}
+
+.bg-templeos-red {
+    background-color: var(--templeos-red);
+}
+
+.bg-templeos-red-dark {
+    background-color: #800000;
+}
+
+.border-templeos-blue {
+    border-color: var(--templeos-blue);
+}
+
+.text-templeos-blue {
+    color: var(--templeos-blue);
+}
+
+.text-templeos-red {
+    color: var(--templeos-red);
+}
+
+.text-templeos-light-red {
+    color: var(--templeos-light-red);
+}
+
+.text-templeos-light-green {
+    color: var(--templeos-light-green);
+}
+
+.text-templeos-light-cyan {
+    color: var(--templeos-light-cyan);
+}
+
+.text-templeos-light-magenta {
+    color: var(--templeos-light-magenta);
+}
+
+.bg-templeos-cyan {
+    background-color: var(--templeos-cyan);
+}
+
+.text-templeos-dark-gray {
+    color: var(--templeos-dark-gray);
+}
+
+

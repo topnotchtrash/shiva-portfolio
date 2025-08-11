@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiva Kodandapuram - Portfolio</title>
+    <meta name="description" content="A personal portfolio with a TempleOS-inspired theme.">
+    <meta name="author" content="Shiva Kodandapuram">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/alpinejs@3" defer></script>
+</head>
+<body class="bg-templeos-gray text-templeos-black font-mono">
+    <div class="container mx-auto p-4">
+        <div class="bg-templeos-blue text-templeos-white border-2 border-templeos-blue p-4">
+            <header class="text-center mb-8 pt-24 pb-40" style="background-image: url('assets/elephant-1024x768.gif'); background-size: cover; background-position: center;">
+                <h1 class="text-4xl font-bold text-templeos-magenta">Shiva Sai Reddy Kodandapuram <img src="assets/TempleOS.jpg" alt="TempleOS sword" class="inline h-10"></h1>
+                <button id="reset-layout" class="bg-templeos-red text-white font-bold py-2 px-4 border-2 border-templeos-white hover:bg-templeos-red-dark">Reset Layout</button>
+                <nav class="mt-4">
+                    <a href="#about" class="text-templeos-yellow hover:underline">[About]</a>
+                    <a href="#projects" class="text-templeos-yellow hover:underline">[Projects]</a>
+                    <a href="#contact" class="text-templeos-yellow hover:underline">[Contact]</a>
+                </nav>
+            </header>
+
+            <main id="sortable-container">
+                <section id="home" class="text-center mb-12" x-data="{ blink: true }" x-init="setInterval(() => blink = !blink, 500)">
+                    <p class="text-lg">An idiot admires complexity, a genius admires simplicity.<span x-show="blink" class="ml-1">_</span></p>
+                </section>
+
+                <section id="about" class="mb-12 p-4 border-2 border-templeos-white sortable-section bg-templeos-cyan text-templeos-yellow">
+                    <h2 class="text-2xl font-bold text-templeos-light-green mb-4">// About Me</h2>
+                    <p>I am a Software Engineer with experience in full-stack development, data engineering, and DevOps. I have a Master's degree in Computer Science from the University of North Texas and a Bachelor's from Jawaharlal Nehru Technological University.</p>
+                    <p class="mt-4">My skills include Java, Python, JavaScript, Spring Boot, React, Angular, AWS, and more. I am passionate about building scalable and efficient applications.</p>
+                </section>
+
+                <section id="projects" class="mb-12 p-4 border-2 border-templeos-white sortable-section bg-templeos-cyan text-templeos-yellow">
+                    <h2 class="text-2xl font-bold text-templeos-light-green mb-4">// Projects</h2>
+                    <div id="sortable-projects" class="grid grid-cols-1 gap-4">
+                
+                        <!-- EscapePlanAI -->
+                        <div class="border p-4 sortable-project">
+                            <h3 class="font-bold text-templeos-light-cyan">EscapePlanAI</h3>
+                            <a href="https://github.com/topnotchtrash/EscapePlanAi" class="block mt-3 text-sm text-templeos-light-green underline hover:text-templeos-white">[GitHub]</a>
+                            <ul class="list-disc list-inside text-templeos-light-yellow space-y-1 mt-2">
+                                <li>Engineered a secure backend-for-frontend (BFF) using Spring Boot, integrated with Spring Security and JWT for user authentication and request authorization.</li>
+                                <li>Designed Python-based FastAPI microservices to calculate optimal travel windows by analyzing public holidays and calendar constraints.</li>
+                                <li>Built logic to correlate escape windows with live event data and location preferences, enabling personalized travel planning.</li>
+                                <li>Structured backend APIs to delegate computational tasks to Python services while maintaining secure, centralized routing via the Java BFF layer.</li>
+                            </ul>
+                            
+                        </div>
+                
+                        <!-- IoT Analyzer -->
+                        <div class="border p-4 sortable-project">
+                            <h3 class="font-bold text-templeos-light-cyan">IOT-Analyzer: Distributed IoT Analytics Platform</h3>
+                            <a href="https://github.com/topnotchtrash/iot_data_analyzer" class="block mt-3 text-sm text-templeos-light-green underline hover:text-templeos-white">[GitHub]</a>
+                            <ul class="list-disc list-inside text-templeos-light-yellow space-y-1 mt-2">
+                                <li>Containerized a multi-node Apache Cassandra cluster and Kafka broker using Docker Compose.</li>
+                                <li>Developed Python producer services to ingest real-time sensor data from APIs like ThingSpeak and OpenMeteo.</li>
+                                <li>Built Kafka consumer services to deserialize and write data to Cassandra with QUORUM consistency.</li>
+                                <li>Enabled real-time monitoring by integrating Prometheus and JMX Exporter across all services.</li>
+                            </ul>
+                            
+                        </div>
+                
+                        <!-- Job Referral Portal -->
+                        <div class="border p-4 sortable-project">
+                            <h3 class="font-bold text-templeos-light-cyan">Job Referral Portal</h3>
+                            <a href="https://github.com/topnotchtrash/JobReferralPortal" class="block mt-3 text-sm text-templeos-light-green underline hover:text-templeos-white">[GitHub]</a>
+                            <ul class="list-disc list-inside text-templeos-light-yellow space-y-1 mt-2">
+                                <li>Built a web application to simplify and manage employee referrals within the organization.</li>
+                                <li>Enabled employees to browse job openings, refer candidates, and track referral status in real time.</li>
+                                <li>Developed HR capabilities for posting jobs, reviewing referrals, and updating candidate statuses.</li>
+                                <li>Implemented a responsive Angular front-end and Spring Boot microservices exposing RESTful APIs.</li>
+                            </ul>
+                          
+                        </div>
+
+                        <!-- Job Application Assistant -->
+                        <div class="border p-4 sortable-project">
+                            <h3 class="font-bold text-templeos-light-cyan">Job Application Assistant</h3>
+                            <a href="https://github.com/topnotchtrash/job-application-assistant" class="block mt-3 text-sm text-templeos-light-green underline hover:text-templeos-white">[GitHub]</a>
+                            <ul class="list-disc list-inside text-templeos-light-yellow space-y-1 mt-2">
+                                <li>A Chrome extension supported by an AI backend that tells you how well your resume matches a job before you even apply and automates job application form completion.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Personal Finance Tracker -->
+                        <div class="border p-4 sortable-project">
+                            <h3 class="font-bold text-templeos-light-cyan">Personal Finance Tracker</h3>
+                            <a href="https://github.com/topnotchtrash/PersonalFinanceTracker" class="block mt-3 text-sm text-templeos-light-green underline hover:text-templeos-white">[GitHub]</a>
+                            <ul class="list-disc list-inside text-templeos-light-yellow space-y-1 mt-2">
+                                <li>This is the backend API for the Personal Finance Tracker application. It is built with Node.js, Express, and MongoDB.</li>
+                            </ul>
+                        </div>
+                
+                    </div>
+                </section>
+
+                <section id="experience" class="mb-12 p-4 border-2 border-templeos-white sortable-section bg-templeos-cyan text-templeos-yellow">
+                    <h2 class="text-2xl font-bold text-templeos-light-green mb-4">// Experience</h2>
+                    <div id="sortable-experience" class="grid grid-cols-1 gap-4">
+                        <!-- Accolite Digital (Client - Morgan Stanley) -->
+                        <div class="border p-4 sortable-experience">
+                            <h3 class="font-bold text-templeos-light-cyan">Accolite Digital (Client - Morgan Stanley)</h3>
+                            <p class="text-sm text-templeos-light-yellow">Software Engineer | June 2022 - October 2023</p>
+                            <ul class="list-disc list-inside text-templeos-light-yellow space-y-1 mt-2">
+                                <li>Integrated swap spread data into trade execution workflows, optimizing the trade-adapter component for seamless real-time database transactions, improving accuracy and operational efficiency.</li>
+                                <li>Replaced RabbitMQ with Kafka for inter-module trade message streaming, enabling more reliable and scalable downstream trade execution pipelines.</li>
+                                <li>Maintained 80%+ unit test coverage across all authored code, ensuring consistent quality and long-term maintainability.</li>
+                                <li>Revamped an internal script execution tool, modernizing it from Perl CGI + HTML/CSS to Angular + Spring Boot + MongoDB.</li>
+                                <li>Designed a dynamic form-based system that eliminated the need for manual HTML updates, saving 50 hours/month for portfolio accounting developers. Optimized Perl scripts for data archival & purging, reducing storage costs by 15%.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Accolite Digital -->
+                        <div class="border p-4 sortable-experience">
+                            <h3 class="font-bold text-templeos-light-cyan">Accolite Digital</h3>
+                            <p class="text-sm text-templeos-light-yellow">Software Engineer Intern | February 2022 - June 2022</p>
+                            <ul class="list-disc list-inside text-templeos-light-yellow space-y-1 mt-2">
+                                <li>Completed intensive training on Software Development Life Cycle (SDLC), developer environments, Spring Boot, and testing frameworks, gaining expertise in backend development and enterprise application architecture.</li>
+                                <li>Worked on real-world coding challenges and debugging exercises, enhancing proficiency in Java, Spring Boot, and database integrations.</li>
+                                <li>Secured an interview with Accolite's primary client, Morgan Stanley, based on outstanding performance in hackathons and technical evaluations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="text-center p-4 border-2 border-templeos-white sortable-section bg-templeos-cyan text-templeos-yellow">
+                    <h2 class="text-2xl font-bold text-templeos-light-green mb-4">// Contact</h2>
+                    <p>You can find me on:</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="www.linkedin.com/in/shiva-sai-reddy-k" target="_blank" class="text-templeos-light-magenta hover:underline">
+                            <pre class="text-xs">
+[in]
+                            </pre>
+                        </a>
+                        <a href="#" class="text-templeos-light-magenta hover:underline">
+                            <pre class="text-xs">
+/\_/\
+( o.o )
+ > ^ <
+                            </pre>
+                        </a>
+                        <a href="#" class="text-templeos-light-magenta hover:underline">
+                            <pre class="text-xs">
+( o)>
+\_/
+                            </pre>
+                        </a>
+                    </div>
+                    <p class="mt-8">
+                        <a href="ShivaKodandapuramResume2025.pdf" download class="bg-templeos-red text-white font-bold py-2 px-4 border-2 border-templeos-white hover:bg-templeos-red-dark">
+                            Download Resume
+                        </a>
+                    </p>
+                </section>
+            </main>
+
+            <footer class="text-center mt-8 text-sm">
+                <p>&copy; 2025 Shiva Kodandapuram. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script>
+        
+
+        const sortableContainer = document.getElementById('sortable-container');
+        const sortableProjects = document.getElementById('sortable-projects');
+        const originalOrder = Array.from(document.querySelectorAll('.sortable-section')).map(section => section.id);
+        const originalProjectsOrder = Array.from(document.querySelectorAll('.sortable-project')).map(project => project.id);
+
+        let sortable = new Sortable(sortableContainer, {
+            animation: 150,
+            ghostClass: 'bg-templeos-red-dark',
+            onEnd: function () {
+                const newOrder = Array.from(document.querySelectorAll('.sortable-section')).map(section => section.id);
+                localStorage.setItem('layoutOrder', JSON.stringify(newOrder));
+            }
+        });
+
+        let sortable_projects = new Sortable(sortableProjects, {
+            animation: 150,
+            ghostClass: 'bg-templeos-red-dark',
+            onEnd: function () {
+                const newProjectsOrder = Array.from(document.querySelectorAll('.sortable-project')).map(project => project.id);
+                localStorage.setItem('projectsOrder', JSON.stringify(newProjectsOrder));
+            }
+        });
+
+        document.getElementById('reset-layout').addEventListener('click', () => {
+            localStorage.removeItem('layoutOrder');
+            localStorage.removeItem('projectsOrder');
+            window.location.reload();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedOrder = JSON.parse(localStorage.getItem('layoutOrder'));
+            if (savedOrder) {
+                savedOrder.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        sortableContainer.appendChild(section);
+                    }
+                });
+            }
+
+            const savedProjectsOrder = JSON.parse(localStorage.getItem('projectsOrder'));
+            if (savedProjectsOrder) {
+                savedProjectsOrder.forEach(projectId => {
+                    const project = document.getElementById(projectId);
+                    if (project) {
+                        sortableProjects.appendChild(project);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
