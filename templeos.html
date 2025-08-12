@@ -34,6 +34,27 @@
                     <p class="mt-4">My skills include Java, Python, JavaScript, Spring Boot, React, Angular, AWS, and more. I am passionate about building scalable and efficient applications.</p>
                 </section>
 
+                                <section id="chat" class="mb-12 p-4 border-2 border-templeos-white sortable-section bg-templeos-gray text-templeos-black" x-data="{ messages: [{text: 'ShivGPT: Ask me anything about Shiva.', sender: 'bot'}], newMessage: '' }">
+                    <div class="bg-templeos-blue text-templeos-white p-2 flex justify-between items-center">
+                        <h2 class="text-xl font-bold">// Chat with Shiva (RAG + LLM) [Experimental]</h2>
+                        <div class="flex space-x-2">
+                            <span class="w-4 h-4 bg-templeos-red border-2 border-templeos-white"></span>
+                            <span class="w-4 h-4 bg-templeos-yellow border-2 border-templeos-white"></span>
+                        </div>
+                    </div>
+                                        <div class="mt-4 h-64 overflow-y-auto p-2 border-2 border-templeos-blue bg-gray-200">
+                        <template x-for="message in messages">
+                            <div class="mb-2" :class="message.sender === 'user' ? 'text-right' : 'text-left'">
+                                <p class="inline-block p-2 rounded-lg" :class="message.sender === 'user' ? 'bg-templeos-light-blue text-white' : 'bg-gray-300 text-black'"><span x-text="message.text"></span></p>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="mt-4 flex">
+                        <input type="text" x-model="newMessage" @keydown.enter="messages.push({text: newMessage, sender: 'user'}); newMessage = ''" class="flex-grow p-2 border-2 border-templeos-blue bg-white text-black focus:outline-none focus:border-templeos-magenta" placeholder="Ask me anything about Shiva...">
+                        <button @click="messages.push({text: newMessage, sender: 'user'}); newMessage = ''" class="bg-templeos-blue text-white font-bold py-2 px-4 border-2 border-templeos-white hover:bg-templeos-blue-dark">Send</button>
+                    </div>
+                </section>
+
                 <section id="projects" class="mb-12 p-4 border-2 border-templeos-white sortable-section bg-templeos-cyan text-templeos-yellow">
                     <h2 class="text-2xl font-bold text-templeos-light-green mb-4">// Projects</h2>
                     <div id="sortable-projects" class="grid grid-cols-1 gap-4">

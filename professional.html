@@ -21,25 +21,81 @@
                 <p class="text-lg leading-relaxed mt-4">My skills include Java, Python, JavaScript, Spring Boot, React, Angular, AWS, and more. I am passionate about building scalable and efficient applications.</p>
             </section>
 
+            <section id="experience" class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Experience</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Accolite Digital (Client - Morgan Stanley)</h3>
+                    <p class="text-md text-gray-600">Software Engineer | June 2022 - October 2023</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 mt-2">
+                        <li>Integrated swap spread data into trade execution workflows, optimizing the trade-adapter component for seamless real-time database transactions, improving accuracy and operational efficiency.</li>
+                        <li>Replaced RabbitMQ with Kafka for inter-module trade message streaming, enabling more reliable and scalable downstream trade execution pipelines.</li>
+                        <li>Maintained 80%+ unit test coverage across all authored code, ensuring consistent quality and long-term maintainability.</li>
+                        <li>Revamped an internal script execution tool, modernizing it from Perl CGI + HTML/CSS to Angular + Spring Boot + MongoDB.</li>
+                        <li>Designed a dynamic form-based system that eliminated the need for manual HTML updates, saving 50 hours/month for portfolio accounting developers. Optimized Perl scripts for data archival & purging, reducing storage costs by 15%.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Accolite Digital</h3>
+                    <p class="text-md text-gray-600">Software Engineer Intern | February 2022 - June 2022</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 mt-2">
+                        <li>Completed intensive training on Software Development Life Cycle (SDLC), developer environments, Spring Boot, and testing frameworks, gaining expertise in backend development and enterprise application architecture.</li>
+                        <li>Worked on real-world coding challenges and debugging exercises, enhancing proficiency in Java, Spring Boot, and database integrations.</li>
+                        <li>Secured an interview with Accolite's primary client, Morgan Stanley, based on outstanding performance in hackathons and technical evaluations.</li>
+                    </ul>
+                </div>
+            </section>
+
             <section id="projects" class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- EscapePlanAI -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">EscapePlanAI</h3>
-                        <p class="text-gray-700">A secure backend-for-frontend using SpringBoot & SpringSecurity with JWT, orchestrating requests to Python microservices. Built FastAPI services to identify optimal travel windows using public holiday logic and calendar data.</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Engineered a secure backend-for-frontend (BFF) using Spring Boot, integrated with Spring Security and JWT for user authentication and request authorization.</li>
+                            <li>Designed Python-based FastAPI microservices to calculate optimal travel windows by analyzing public holidays and calendar constraints.</li>
+                            <li>Built logic to correlate escape windows with live event data and location preferences, enabling personalized travel planning.</li>
+                            <li>Structured backend APIs to delegate computational tasks to Python services while maintaining secure, centralized routing via the Java BFF layer.</li>
+                        </ul>
+                        <a href="https://github.com/topnotchtrash/EscapePlanAi" target="_blank" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">View on GitHub</a>
                     </div>
+                    <!-- IOT-Analyzer -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">T-Analyzer: Distributed IoT Analytics Platform</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">IOT-Analyzer: Distributed IoT Analytics Platform</h3>
                         <ul class="list-disc list-inside text-gray-700 space-y-1">
                             <li>Containerized a multi-node Apache Cassandra cluster and Kafka broker using Docker Compose.</li>
-                            <li>Built Python producer services to ingest sensor data from ThingSpeak and OpenMeteo APIs in real-time.</li>
-                            <li>Implemented Kafka consumer services to deserialize and write data into Cassandra with QUORUM consistency for durability.</li>
-                            <li>Integrated Prometheus and JMX Exporter for real-time monitoring of system health and database metrics.</li>
+                            <li>Developed Python producer services to ingest real-time sensor data from APIs like ThingSpeak and OpenMeteo.</li>
+                            <li>Built Kafka consumer services to deserialize and write data to Cassandra with QUORUM consistency.</li>
+                            <li>Enabled real-time monitoring by integrating Prometheus and JMX Exporter across all services.</li>
                         </ul>
+                        <a href="https://github.com/topnotchtrash/iot_data_analyzer" target="_blank" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">View on GitHub</a>
                     </div>
+                    <!-- Job Referral Portal -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Job Referral Portal</h3>
-                        <p class="text-gray-700">Developed a responsive Angular front-end with dynamic job search, form validation, and referral submission workflows. Built Spring Boot microservices exposing RESTful APIs to manage referral tracking, HR approval processes, and job postings.</p>
+                         <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Built a web application to simplify and manage employee referrals within the organization.</li>
+                            <li>Enabled employees to browse job openings, refer candidates, and track referral status in real time.</li>
+                            <li>Developed HR capabilities for posting jobs, reviewing referrals, and updating candidate statuses.</li>
+                            <li>Implemented a responsive Angular front-end and Spring Boot microservices exposing RESTful APIs.</li>
+                        </ul>
+                        <a href="https://github.com/topnotchtrash/JobReferralPortal" target="_blank" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">View on GitHub</a>
+                    </div>
+                    <!-- Job Application Assistant -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Job Application Assistant</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>A Chrome extension supported by an AI backend that tells you how well your resume matches a job before you even apply and automates job application form completion.</li>
+                        </ul>
+                        <a href="https://github.com/topnotchtrash/job-application-assistant" target="_blank" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">View on GitHub</a>
+                    </div>
+                    <!-- Personal Finance Tracker -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Personal Finance Tracker</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>This is the backend API for the Personal Finance Tracker application. It is built with Node.js, Express, and MongoDB.</li>
+                        </ul>
+                        <a href="https://github.com/topnotchtrash/PersonalFinanceTracker" target="_blank" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">View on GitHub</a>
                     </div>
                 </div>
             </section>
